@@ -31,11 +31,11 @@ body {
 }
 
 .big-title:hover {
-    transition: 0.5s;
-      font-size: 72px;
-      background: linear-gradient(#AA3127, #03306B);
-      background-clip: text;
-      text-fill-color: transparent;
+    transition: 0.5s;    
+    background-image: linear-gradient(to right, #AA3127, #03306B); /* Standard syntax; must be last */
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 .signup-frame {
