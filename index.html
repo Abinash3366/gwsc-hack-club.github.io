@@ -1,0 +1,93 @@
+<!doctype html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="GWSC Hack Club">
+    <meta name="theme-color" content="#0E4456">
+    <meta name="description" content="We empower students to create websites, apps and games!">
+
+    <title>GWSC Hack Club | not accepting new members</title>
+
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/fpm1prd.css">
+
+</head>
+
+<body>
+
+<span onclick="updateFillables();" class="big-title">GWSC Hack Club</span><br>
+<span class="moving-info-text">I want to make a <span class="fillable" id="make-category">thing</span> that <span class="fillable" id="make-action">does something</span> for <span class="fillable" id="make-who">somebody</span>.</span>
+
+<br><br><br><br>
+
+<div class="signup-frame">
+    <h2>> Sorry, we aren't accepting new members right now.</h2>
+    <p>> Keep inventing!</p>
+</div>
+
+<div class="footer">
+    <p>
+        Created by <a href="https://github.com/shaunakg/" id="gh-link">@shaunakg</a> on GitHub under the LGPL v2.1 License<br>
+    </p>
+</div>
+
+</body>
+
+<script>
+
+const category = document.getElementById("make-category");
+const action = document.getElementById("make-action");
+const who = document.getElementById("make-who");
+
+const cats = [
+    "website",
+    "app",
+    "game",
+    "database",
+    "program",
+    "tool",
+    "device"
+]
+
+const acts = [
+    "makes pancakes",
+    "sets a timer",
+    "breaks a leg",
+    "starts a show",
+    "kills a bird",
+    "opens the microwave",
+    "makes a website",
+]
+
+const mems = [
+    "my footy team",
+    "my soccer club",
+    "my homework",
+    "my mother's second cousin",
+    "my german shepard",
+    "my website",
+    "the president",
+    "the prime minister",
+    "the Queen",
+    "the King",
+    "your comfort",
+    "your very small cat",
+    "your peace of mind"
+]
+
+category.innerText = cats[Math.floor(Math.random()*cats.length)];
+action.innerText = acts[Math.floor(Math.random()*acts.length)];
+who.innerText = mems[Math.floor(Math.random()*mems.length)];
+
+function updateFillables() {
+    category.innerText = cats[Math.floor(Math.random()*cats.length)];
+    action.innerText = acts[Math.floor(Math.random()*acts.length)];
+    who.innerText = mems[Math.floor(Math.random()*mems.length)];
+}
+
+setInterval(updateFillables, 2000);
+
+</script>

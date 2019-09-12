@@ -1,0 +1,84 @@
+
+/* 
+
+font-family: 'Modak', cursive;
+font-family: 'Hepta Slab', serif;
+
+font-family: bebas-neue,sans-serif;
+font-weight: 400;
+font-style: normal;
+
+*/
+
+
+body {
+    margin: 20px;
+    background-color: rgb(255, 251, 198);
+    font-family: 'Hepta Slab', serif;
+    text-align: center;
+    overflow: hidden;
+}
+
+.big-title {
+    font-family: bebas-neue,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10em;
+    text-transform: uppercase;
+    transition: 0.5s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.big-title:hover {
+    transition: 0.5s;
+    color: red;
+}
+
+.signup-frame {
+    border-radius: 10px;
+    padding: 30px;
+    background-color: black;
+    font-family: monospace;
+    color: yellow;
+    box-shadow: 10px 10px 52px -12px rgba(0,0,0,0.75);
+    max-width: 40%;
+    text-align: start;
+    position: absolute;
+    left: 30%;
+    right: 30%;
+}
+
+.moving-info-text {
+    font-size: 2em;
+    line-height: 2em;
+}
+
+.fillable {
+    padding: 10px;
+    background-color: black;
+    color: yellow;
+    transition: 0.25s;
+    box-shadow: 10px 10px 19px -7px rgba(0,0,0,0.75);
+    border-radius: 2px;
+}
+
+.footer {
+    color: black;
+    font-size: 0.75em;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 20px;
+}
+
+#gh-link {
+    background-color: black;
+    padding: 5px;
+    text-decoration: none;
+    color: yellow;
+    transition: 0.25s;
+}
