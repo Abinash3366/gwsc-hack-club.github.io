@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#0E4456">
     <meta name="description" content="We empower students to create websites, apps and games!">
 
-    <title>GWSC Hack Club | not accepting new members</title>
+    <title>GWSC Hack Club | accepting new members</title>
 
     <link rel="stylesheet" href="stylesheet.css">
     <link href="https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap" rel="stylesheet">
@@ -18,15 +18,30 @@
 
 <body>
 
-<span onclick="updateFillables();" class="big-title">GWSC Hack Club</span><br>
+<span onclick="updateFillables();" class="big-title">GWSC Innovator's Club</span><br><br>
 <span class="moving-info-text">I want to make a <span class="fillable" id="make-category">thing</span> that <span class="fillable" id="make-action">does something</span> for <span class="fillable" id="make-who">somebody</span>.</span>
 
 <br><br><br><br>
 
-<div class="signup-frame">
-    <h2>Sorry, we aren't accepting new members right now.</h2>
-    <p>> Keep inventing!</p>
+<div class="signup-frame" id="signup-modal">
+    <a class="x-button" href="#" onclick="hideSignupModal();">✖</a>
+
+    <div id="not-accepting-members">
+        <h2>Sorry, we aren't accepting new members right now.</h2>
+        <p>> Keep inventing!</p>
+    </div>
+
+    <div id="signup-form">
+        <h2>Thanks for taking the interest in our club.</h2>
+        <form action="process.php" method="GET">
+            <p>
+                > Email: <input maxlength="200" type="text" id="email-input">
+            </p>
+        </form>
+    </div>
 </div>
+
+<a class="primary-btn" href="#" onclick="showSignupModal();">Sign me up!</a>
 
 <div class="footer">
     <p>
@@ -41,6 +56,28 @@
 const category = document.getElementById("make-category");
 const action = document.getElementById("make-action");
 const who = document.getElementById("make-who");
+const su_modal = document.getElementById("signup-modal");
+const nam_form = document.getElementById("not-accepting-members");
+const signup_form = document.getElementById("signup-form");
+const email_entry = document.getElementById("email-input");
+
+const isAcceptingMembers = true;
+
+function showSignupModal() {
+    su_modal.style.display = "unset";
+    if (isAcceptingMembers) {
+        signup_form.style.display = "unset";
+        nam_form.style.display = "none";
+        email_entry.focus();
+    } else {
+        nam_form.style.display = "unset";
+        signup_form.style.display = "none";
+    }
+}
+
+function hideSignupModal() {
+    su_modal.style.display = "none";
+}
 
 const cats = [
     "website",
@@ -57,7 +94,7 @@ const acts = [
     "sets a timer",
     "breaks a leg",
     "starts a show",
-    "kills a bird",
+    "makes it rain",
     "opens the microwave",
     "makes a website",
 ]
@@ -66,16 +103,17 @@ const mems = [
     "my footy team",
     "my soccer club",
     "my homework",
-    "my mother's second cousin",
+    "my cousin",
     "my german shepard",
     "my website",
     "the president",
     "the prime minister",
     "the Queen",
     "the King",
-    "your comfort",
-    "your very small cat",
-    "your peace of mind"
+    "a very small cat",
+    "a suspicious sandwich",
+    "two grains of sand",
+    "three hundred dollars"
 ]
 
 category.innerText = cats[Math.floor(Math.random()*cats.length)];

@@ -19,13 +19,22 @@ body {
     overflow: hidden;
 }
 
+input {
+    border: none;
+    background: transparent;
+    color: yellow;
+    font-family: monospace;
+    width: 40%;
+    font-size: 1em;
+}
+
 .big-title {
+    color: #000024;
     font-family: bebas-neue,sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 10em;
     text-transform: uppercase;
-    transition: 0.5s;
     cursor: pointer;
     user-select: none;
 }
@@ -39,21 +48,31 @@ body {
 }
 
 .signup-frame {
+    display: none;
     border-radius: 10px;
-    padding: 30px;
-    background-color: black;
+    padding: 5%;
+    background: black;
     font-family: monospace;
     color: yellow;
     box-shadow: 10px 10px 52px -12px rgba(0,0,0,0.75);
     max-width: 40%;
     text-align: start;
     position: absolute;
+    z-index: 10;
+    top: 10%;
     left: 30%;
     right: 30%;
 }
 
-.moving-info-text {
+.signup-frame .x-button {
+    text-decoration: none;
     font-size: 2em;
+    user-select: none;
+    color: yellow;
+}
+
+.moving-info-text {
+    font-size: 1.5em;
     line-height: 2em;
 }
 
@@ -61,6 +80,16 @@ body {
     padding: 10px;
     background-color: black;
     color: yellow;
+    transition: 0.25s;
+    box-shadow: 10px 10px 19px -7px rgba(0,0,0,0.75);
+    border-radius: 5px;
+}
+
+.primary-btn {
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    text-decoration: none;
     transition: 0.25s;
     box-shadow: 10px 10px 19px -7px rgba(0,0,0,0.75);
     border-radius: 5px;
