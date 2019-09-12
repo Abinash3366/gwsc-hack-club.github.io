@@ -60,7 +60,7 @@ body {
     color: yellow;
     transition: 0.25s;
     box-shadow: 10px 10px 19px -7px rgba(0,0,0,0.75);
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 .footer {
