@@ -32,7 +32,10 @@ body {
 
 .big-title:hover {
     transition: 0.5s;
-    color: red;
+      font-size: 72px;
+      background: linear-gradient(#AA3127, #03306B);
+      background-clip: text;
+      text-fill-color: transparent;
 }
 
 .signup-frame {
